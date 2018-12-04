@@ -1,4 +1,4 @@
-
+const authController = require('./controllers/auth');
 module.exports = app => {
   // /*
   //  Endpoints to add
@@ -9,5 +9,8 @@ module.exports = app => {
   //
   //   • login
   // */
-  
+
+
+    //signIn
+    app.post('/signin', authController.signin);
   };
