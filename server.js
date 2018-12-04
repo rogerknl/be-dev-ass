@@ -6,6 +6,10 @@ require('dotenv').config();
 
 const router = require('./router');
 
+//DB Setup
+const  {mongoose} = require('./db/mongoose');
+
+
 //App Setup
 const app = express();
 app.use(cors());
