@@ -1,5 +1,6 @@
 const authController = require('./controllers/auth');
 const userController = require('./controllers/user');
+const policyController = require('./controllers/policy');
 const authorization = require ('./middlewares/authorization');
 
 module.exports = app => {
@@ -18,7 +19,8 @@ module.exports = app => {
     app.get('/user/byUsername/:username',authorization.requireUserOrAdminAuth, userController.getUserByUsername);
 
     //Require admin access
-    //app.get('/policy/:username',authorization.requireAdminAuth, (req,res)=>{res.send('OK')});
+    app.get('/policy/:username',authorization.requireAdminAuth, policyController.getPolicyByUsername);
+    app.get('/user/linkedTo/:poicyId',authorization.requireAdminAuth, policyController.getUserLinkedToPolicy);
   
 
     //signIn
