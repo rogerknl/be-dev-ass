@@ -1,4 +1,7 @@
 const authController = require('./controllers/auth');
+
+const authorization = require ('./middlewares/authorization');
+
 module.exports = app => {
   // /*
   //  Endpoints to add
@@ -9,7 +12,13 @@ module.exports = app => {
   //
   //   • login
   // */
+  
+    //Require user or admin access
+    app.get('/user/byId/:userId',authorization.requireUserOrAdminAuth, (req,res)=>{res.send('OK')});
 
+    //Require admin access
+    app.get('/policy/:username',authorization.requireAdminAuth, (req,res)=>{res.send('OK')});
+  
 
     //signIn
     app.post('/signin', authController.signin);
