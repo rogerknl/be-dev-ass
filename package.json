@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "loadDB": "node ./services/loaderDB.js"
   },
   "repository": {
     "type": "git",
@@ -18,11 +19,13 @@
   },
   "homepage": "https://github.com/rogerknl/be-dev-ass#readme",
   "dependencies": {
+    "bcrypt": "^3.0.2",
     "body-parser": "^1.18.3",
     "cors": "^2.8.5",
     "express": "^4.16.4",
     "mongoose": "^5.3.14",
-    "morgan": "^1.9.1"
+    "morgan": "^1.9.1",
+    "node-fetch": "^2.3.0"
   },
   "devDependencies": {
     "dotenv": "^6.1.0",
