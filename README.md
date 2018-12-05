@@ -41,8 +41,9 @@ $ npm run dev
 3. GET  /policy/:username/
 4. GET  /user/linkedTo/:poicyId
 
-You can use the following code for postman:
-<details><summary></summary>
+You can use the following code for postman: [here](https://github.com/rogerknl/be-dev-ass/develop/tests/be-dev-ass.postman_collection.json)
+<details><summary>Show/hide</summary>
+	
 ```
 {
 	"info": {
