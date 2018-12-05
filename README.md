@@ -38,17 +38,37 @@ $ npm run dev
 1. POST /signin
 
 ```
-  ---> body should contain username and password
-      If user and password are OK returns object with jwt 
+  ---> body should contain username and password 
   <--- { token: "eyJhbGciOiJIUzI1..." }
 ```
 Next endpoints requires user or admin role
+
 2. GET  /user/byId/:userId
+
+```
+  ---> header requires bearer token 
+  <--- { id: :userId, name: "...", email: "...", role: "..." }
+```
 3. GET  /user/byUsername/:username
 
+```
+  ---> header requires bearer token 
+  <--- { id: "...", name: :username, email: "...", role: "..." }
+```
 Next endpoints requires admin role
+
 4. GET  /policy/:username/
+
+```
+  ---> header requires bearer token (admin role)
+  <--- { policies: [...] }
+```
 5. GET  /user/linkedTo/:poicyId
+
+```
+  ---> header requires bearer token (admin role)
+  <--- { id: : "...", name: "...", email: "...", role: "..." }
+```
 
 You can use the following code for postman: [here](https://github.com/rogerknl/be-dev-ass/tree/develop/tests/be-dev-ass.postman_collection.json)
 <details><summary>Show/hide</summary>
