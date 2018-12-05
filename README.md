@@ -41,7 +41,7 @@ $ npm run dev
   ---> body should contain username and password 
   <--- { token: "eyJhbGciOiJIUzI1..." }
 ```
-Next endpoints requires user or admin role
+##### Next endpoints requires user or admin role
 
 2. GET  /user/byId/:userId
 
@@ -55,7 +55,7 @@ Next endpoints requires user or admin role
   ---> header requires bearer token 
   <--- { id: "...", name: :username, email: "...", role: "..." }
 ```
-Next endpoints requires admin role
+##### Next endpoints requires admin role
 
 4. GET  /policy/:username/
 
