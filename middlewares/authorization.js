@@ -14,11 +14,12 @@ module.exports.requireUserOrAdminAuth = async (req, res, next) => {
           return next();
         }
       } catch(err){
-        console.log(err)
+        //console.log(err)
       }
     }
   }
-  return res.status(401).send('Invalid token')
+  res.status(401);
+  return res.send('Invalid token')
 }
 
 module.exports.requireAdminAuth = async (req, res, next) => {
@@ -32,11 +33,13 @@ module.exports.requireAdminAuth = async (req, res, next) => {
         if ( user.role == "admin" ){
           return next();
         } 
-        return res.status(401).send('Role Unauthorized')
+        res.status(401)
+        return res.send('Role Unauthorized')
       } catch(err){
 
       }
     }
   }
-  return res.status(401).send('Invalid token')
+  res.status(401)
+  return res.send('Invalid token')
 }

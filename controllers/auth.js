@@ -11,8 +11,10 @@ module.exports.signin = async (req, res) => {
     const match = await bcrypt.compare(password, user.password);
     if ( match ){
       let token = jwt.sign({ userId: user.uid }, process.env.SECRETJWT);
-      return res.status(200).send({token});
+      res.status(200);
+      return res.send({token});
     }
   }
-  return res.status(401).send('Invalid Credentials');
+  res.status(401);
+  return res.send('Invalid Credentials');
 };
