@@ -1,0 +1,168 @@
+{
+	"info": {
+		"_postman_id": "6f85b76f-9c57-45da-9d77-e798059a270e",
+		"name": "be-dev-ass",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Signin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"Roberts\",\n\t\"password\": \"Roberts\"\n}"
+				},
+				"url": {
+					"raw": "{{url}}/signin",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user/byId/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/user/byId/12f34e63-d4f1-4701-bbad-5b4b81a66a38",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user",
+						"byId",
+						"12f34e63-d4f1-4701-bbad-5b4b81a66a38"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user/byUsername",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/user/byUsername/Roberts",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user",
+						"byUsername",
+						"Roberts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "policies by username",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/policy/Britney",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"policy",
+						"Britney"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user linked To policy id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/user/linkedTo/7b624ed3-00d5-4c1b-9ab8-c265067ef58b",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user",
+						"linkedTo",
+						"7b624ed3-00d5-4c1b-9ab8-c265067ef58b"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
