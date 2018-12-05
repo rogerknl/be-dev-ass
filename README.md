@@ -36,10 +36,19 @@ $ npm run dev
 
 ## EndPoints
 1. POST /signin
-1. GET  /user/byId/:userId
-2. GET  /user/byUsername/:username
-3. GET  /policy/:username/
-4. GET  /user/linkedTo/:poicyId
+
+```
+  ---> body should contain username and password
+      If user and password are OK returns object with jwt 
+  <--- { token: "eyJhbGciOiJIUzI1..." }
+```
+Next endpoints requires user or admin role
+2. GET  /user/byId/:userId
+3. GET  /user/byUsername/:username
+
+Next endpoints requires admin role
+4. GET  /policy/:username/
+5. GET  /user/linkedTo/:poicyId
 
 You can use the following code for postman: [here](https://github.com/rogerknl/be-dev-ass/tree/develop/tests/be-dev-ass.postman_collection.json)
 <details><summary>Show/hide</summary>
