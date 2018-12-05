@@ -40,14 +40,11 @@ const addPolicies = async (json) => {
   }
 }
 
-
 const request = async () => {
-
   await User.collection.deleteMany({}, function(err) { 
   });
   await Policy.collection.deleteMany({}, function(err) { 
   });
-
   
   let response = await fetch("http://www.mocky.io/v2/5808862710000087232b75ac");
   let json = await response.json();
@@ -57,6 +54,5 @@ const request = async () => {
   json = await response.json();
   await addPolicies(json);
   mongoose.connection.close();
-  
 }
 request();

@@ -31,9 +31,15 @@ policyInDB = {
 const numPoliciesMerrill = 0;
 const numPoliciesBritney = 102;
 
+tokenInvalid = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c';
+tokenUserValid = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI0NGU0NDI2OC1kY2U4LTQ5MDItYjY2Mi0xYjM0ZDJjMTBiOGUiLCJpYXQiOjE1NDQwMTk5MDV9.CRwAUqU8rZt1j59HqE2hiGcBapVpW8dRnhDccAFyCi0';
+tokenAdminValid = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhMGVjZTVkYi1jZDE0LTRmMjEtODEyZi05NjY2MzNlN2JlODYiLCJpYXQiOjE1NDQwMTk5NDF9.D9OR-tqODOdjKzyR5ase9dijWENOM6VYuY2TDMXqhLk';
 module.exports ={
   usersInDB,
   policyInDB,
   numPoliciesMerrill,
-  numPoliciesBritney
+  numPoliciesBritney,
+  tokenInvalid,
+  tokenUserValid,
+  tokenAdminValid
 }
