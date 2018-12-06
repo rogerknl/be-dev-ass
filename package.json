@@ -7,7 +7,7 @@
     "test": "mocha tests/tests.js",
     "test-watch": "nodemon --exec \"npm test\"",
     "dev": "nodemon server.js",
-    "loadDB": "node ./services/loaderDB.js"
+    "loadDB": "node -e \"require('./services/loaderDB.js').request()\""
   },
   "repository": {
     "type": "git",
@@ -33,7 +33,9 @@
     "chai": "^4.2.0",
     "dotenv": "^6.1.0",
     "mocha": "^5.2.0",
+    "nock": "^10.0.3",
     "nodemon": "^1.18.7",
+    "proxyquire": "^2.1.0",
     "sinon": "^7.1.1"
   }
 }
